@@ -18,6 +18,10 @@ app.use(cors());
 // API's
 app.use('/request', require('./routers'));
 
+app.get('/', (req, res) => {
+    res.send("This is working perfectly well");
+})
+
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => console.log(`Server is running on PORT: ${port}`));
